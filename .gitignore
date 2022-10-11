@@ -1,0 +1,19 @@
+# Intellij
+*.iml
+**/.idea
+
+# output
+**/out
+**/output
+**/target
+**/build
+*.class
+
+# Logs
+**/log
+**/logs
+*.log
+*.zip
+
+# Checkstyle reports
+checkstyle-result.xml

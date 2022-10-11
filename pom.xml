@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.1</version>
+    </parent>
+
+    <groupId>org.astraukh.admin.monitor</groupId>
+    <artifactId>admin-monitor</artifactId>
+    <version>${revision}</version>
+
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>admin-monitor-starter</module>
+    </modules>
+
+    <properties>
+
+        <revision>0.1</revision>
+        <build.artifact.finalName>${app.name}-${revision}</build.artifact.finalName>
+
+        <!-- Spring properties -->
+        <app.name>admin-monitor</app.name>
+        <app.description>Spring Boot Admin panel for monitoring microservices</app.description>
+        <app.version>${revision}</app.version>
+        <app.build.timestamp>${maven.build.timestamp}</app.build.timestamp>
+        <maven.build.timestamp.format>yyyy-MM-dd-HH:mm</maven.build.timestamp.format>
+
+        <!-- Project settings -->
+        <java.version>16</java.version>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <mainClassName>org.astraukh.admin.monitor.starter.Application</mainClassName>
+
+        <!-- not included in spring-boot-starter-parent -->
+        <spring-boot-admin-starter.version>2.4.1</spring-boot-admin-starter.version>
+        <checkstyle-maven-plugin.version>3.2.0</checkstyle-maven-plugin.version>
+        <checkstyle-core.version>10.3.4</checkstyle-core.version>
+
+    </properties>
+
+    <dependencies>
+
+        <!-- Spring Boot - Starter -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- Spring Boot - Starter - Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot - Starter - Security -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- Spring - Boot - Starter - Admin - Server -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- Spring - Boot - Starter - Admin - Server -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${spring-boot-admin-starter.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
+<!--                <version>${checkstyle-maven-plugin.version}</version>-->
+<!--                <dependencies>-->
+<!--                    <dependency>-->
+<!--                        <groupId>com.puppycrawl.tools</groupId>-->
+<!--                        <artifactId>checkstyle</artifactId>-->
+<!--                        <version>${checkstyle-core.version}</version>-->
+<!--                    </dependency>-->
+<!--                </dependencies>-->
+<!--                <configuration>-->
+<!--                    <failsOnError>true</failsOnError>-->
+<!--                    <logViolationsToConsole>true</logViolationsToConsole>-->
+<!--                    <consoleOutput>true</consoleOutput>-->
+<!--                    <outputFile>-->
+<!--                        ${maven.multiModuleProjectDirectory}/target/reports/${project.name}/checkstyle-result.xml-->
+<!--                    </outputFile>-->
+<!--                    <configLocation>checkstyle/checkstyle.xml</configLocation>-->
+<!--                    <suppressionsLocation>checkstyle/suppressions.xml</suppressionsLocation>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>validate</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+
+        </plugins>
+    </build>
+
+</project>
