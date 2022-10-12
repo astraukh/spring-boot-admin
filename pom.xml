@@ -43,8 +43,6 @@
 
         <!-- not included in spring-boot-starter-parent -->
         <spring-boot-admin-starter.version>2.4.1</spring-boot-admin-starter.version>
-        <checkstyle-maven-plugin.version>3.2.0</checkstyle-maven-plugin.version>
-        <checkstyle-core.version>10.3.4</checkstyle-core.version>
 
     </properties>
 
