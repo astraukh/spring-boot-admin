@@ -9,7 +9,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.1</version>
+        <version>2.7.4</version>
     </parent>
 
     <groupId>org.astraukh.admin.monitor</groupId>
@@ -42,7 +42,7 @@
         <mainClassName>org.astraukh.admin.monitor.starter.Application</mainClassName>
 
         <!-- not included in spring-boot-starter-parent -->
-        <spring-boot-admin-starter.version>2.4.1</spring-boot-admin-starter.version>
+        <spring-boot-admin-starter.version>2.7.4</spring-boot-admin-starter.version>
 
     </properties>
 
@@ -86,42 +86,5 @@
 
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-checkstyle-plugin</artifactId>-->
-<!--                <version>${checkstyle-maven-plugin.version}</version>-->
-<!--                <dependencies>-->
-<!--                    <dependency>-->
-<!--                        <groupId>com.puppycrawl.tools</groupId>-->
-<!--                        <artifactId>checkstyle</artifactId>-->
-<!--                        <version>${checkstyle-core.version}</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
-<!--                <configuration>-->
-<!--                    <failsOnError>true</failsOnError>-->
-<!--                    <logViolationsToConsole>true</logViolationsToConsole>-->
-<!--                    <consoleOutput>true</consoleOutput>-->
-<!--                    <outputFile>-->
-<!--                        ${maven.multiModuleProjectDirectory}/target/reports/${project.name}/checkstyle-result.xml-->
-<!--                    </outputFile>-->
-<!--                    <configLocation>checkstyle/checkstyle.xml</configLocation>-->
-<!--                    <suppressionsLocation>checkstyle/suppressions.xml</suppressionsLocation>-->
-<!--                </configuration>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <phase>validate</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>check</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--            </plugin>-->
-
-        </plugins>
-    </build>
 
 </project>
